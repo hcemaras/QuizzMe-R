@@ -15,7 +15,7 @@ QuizzMe=function(n=1)
   #Answer
   r=QuizzMe_Words$Turkish[w]
   #Options
-  o=sample(c(r,sample(x = QuizzMe_Words$Turkish, size=3, prob = (QuizzMe_Words$Fail/QuizzMe_Words$Total))),size=4)
+  o=sample(c(r,sample(x = QuizzMe_Words$Turkish[-w], size=3, prob = (QuizzMe_Words$Fail[-w]/QuizzMe_Words$Total[-w]))),size=4)
   "Your Options are:";cat(c("1) ",o[1],"        "));cat(c("2) ",o[2]));cat("\n");cat(c("3) ",o[3],"        "));cat(c("4) ",o[4]))
   
   #Input Functions
